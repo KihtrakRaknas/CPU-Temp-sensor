@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "osx-temperature-sensor": "^1.0.3",
+    "pi-temperature": "^2.1.0",
     "systeminformation": "^4.14.3"
   }
 }
