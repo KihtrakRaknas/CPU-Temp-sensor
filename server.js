@@ -1,10 +1,7 @@
-const si = require('systeminformation');
-
-setInterval(()=>{
-    si.cpuTemperature()
-    .then(data => console.log(data))
-    .catch(error => console.error(error));
-
-    //Linux
-    //sudo apt-get install lm-sensors
+var temp = require("pi-temperature");
+setInterval(()=>{ 
+    temp.measure(function(err, temp) {
+        if (err) console.error(err);
+        else console.log("It's " + temp + " celsius.");
+    });
 },10000)
